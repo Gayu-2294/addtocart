@@ -65,8 +65,8 @@ public class AddToCart extends BaseClass {
 		Thread.sleep(9000);
 
 		btnClick(a.getCod());
-		//btnClick(a.getLock());
-		WindowHandles(0);
+		btnClick(a.getLock());
+		
 		
 	    
 
