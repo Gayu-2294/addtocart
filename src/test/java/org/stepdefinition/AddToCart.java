@@ -30,11 +30,8 @@ public class AddToCart extends BaseClass {
 		btnClick(l.getProduct());
 		Thread.sleep(6000);
 		WindowHandles(1);
-	    
-	}
 
-	
-	
+	}
 
 	@When("user select any product and add that to the cart")
 	public void user_select_any_product_and_add_that_to_the_cart() throws InterruptedException {
@@ -42,43 +39,46 @@ public class AddToCart extends BaseClass {
 		btnClick(a.getCart());
 		Thread.sleep(3000);
 		btnClick(a.getBuybutton());
-	    
-	    
+
 	}
 
 	@When("user place order and login the application using correct credential")
-	public void user_place_order_and_login_the_application_using_correct_credential() throws AWTException, InterruptedException {
-		AddCart a=new AddCart();
+	public void user_place_order_and_login_the_application_using_correct_credential()
+			throws AWTException, InterruptedException {
+		AddCart a = new AddCart();
 		fill(a.getSignin(), "8870724865");
 		toPerformEnter();
 		fill(a.getPass(), "Gayu@2210");
 		toPerformEnter();
 		Thread.sleep(3000);
-	    
-	   	}
+
+	}
 
 	@When("user select address and select payment option")
 	public void user_select_address_and_select_payment_option() throws InterruptedException {
-		AddCart a=new AddCart();
+		AddCart a = new AddCart();
 		btnClick(a.getUseadd());
 		scrollintoview();
 		Thread.sleep(9000);
-
 		btnClick(a.getCod());
 		btnClick(a.getLock());
 		
+		WindowHandles(2);
 		
-	    
 
-}
+	}
+
 	@Then("user remove the product from the cart")
-	public void user_remove_the_product_from_the_cart() {
-RemoveCart rc=new RemoveCart();
+	public void user_remove_the_product_from_the_cart() throws InterruptedException {
+		
+		RemoveCart rc = new RemoveCart();
+		
 
 		btnClick(rc.getAdcart());
 		btnClick(rc.getDelete());
+		Thread.sleep(3000);
 		driver.quit();
-	    
+
 	}
 
-}   
+}

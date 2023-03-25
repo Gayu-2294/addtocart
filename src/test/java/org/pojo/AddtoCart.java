@@ -22,7 +22,7 @@ public class AddtoCart extends BaseClass {
 	}
 
 	@CacheLookup
-	@FindBy(xpath = "//span[text()='945']")
+	@FindBy(xpath = "(//span[text()='649'])[1]")
 
 	private WebElement product;
 

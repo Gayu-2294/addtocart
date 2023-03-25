@@ -18,7 +18,7 @@ public class RemoveCart extends BaseClass {
 		return adcart;
 	}
 	@CacheLookup
-	@FindBy(xpath="//input[@aria-label='Delete SGF11 Women&#39;s Kanjivaram Soft Lichi Silk Saree With Blouse Piece (Dark Blue 02)']")
+	@FindBy(xpath="//input[@aria-label='Delete SGF11- Women&#39;s Kanjivaram Soft Silk Saree With Blouse Piece (Red)']")
 private WebElement delete;
 
 	public WebElement getDelete() {

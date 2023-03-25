@@ -74,7 +74,7 @@ public static void WindowHandles(int i) {
 	Set<String> ad=driver.getWindowHandles();
 	List<String> li=new ArrayList<String>(ad);
 	int n=li.size();
-	System.out.println("no of windows"+n);
+	System.out.println("no of windows  "+n);
 	driver.switchTo().window(li.get(i));
 	
 	
